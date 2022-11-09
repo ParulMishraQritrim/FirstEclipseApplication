@@ -20,7 +20,7 @@ import FirstEclipse.example.FirstEclipse.util.propertyFile;
 @Configuration
 @ComponentScan
 @PropertySource(value = { "classpath:application.properties",
-		"classpath:queries.properties", /* "classpath:messages.properties" */ })
+		"classpath:queries.properties", "classpath:messages.properties"})
 @Import({DBConfig.class})
 
 public class AppConfig 
@@ -49,13 +49,13 @@ public class AppConfig
         	return new propertyFile("queries");
     }
     
-  /*  @Bean("messages")
+    @Bean("messages")
     @Qualifier("messages")
     public propertyFile propertyFileReaderMessages() {
         	return new propertyFile("messages");
     }
     
-    @Bean("constants")
+   /* @Bean("constants")
     @Qualifier("constants")
     public propertyFile propertyFileReaderConstants() {
     	return new propertyFile("constants");

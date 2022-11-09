@@ -17,7 +17,8 @@ public class propertyFile {
     
 	public propertyFile(String fileName) {
         super();
-        resourceBundle = ResourceBundle.getBundle("queries");
+        resourceBundle = ResourceBundle.getBundle(fileName);
+        
     }
     
     public String getValue(String key){
